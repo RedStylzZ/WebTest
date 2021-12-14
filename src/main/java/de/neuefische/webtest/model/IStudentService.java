@@ -8,9 +8,9 @@ public interface IStudentService {
 
     List<Student> students = new ArrayList<>();
 
-    Student getStudentById(int id);
-
     List<Student> getStudents();
+
+    Student getStudentById(int id);
 
     Student addStudent(Student student);
 

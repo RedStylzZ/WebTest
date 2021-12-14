@@ -8,9 +8,8 @@ import lombok.NonNull;
 @AllArgsConstructor
 public class Student {
 
-    @NonNull int age;
     @NonNull int id;
     @NonNull String name;
-    boolean status;
+    @NonNull int age;
 
 }

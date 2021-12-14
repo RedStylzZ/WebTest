@@ -11,25 +11,29 @@ import java.util.List;
 @RequestMapping("student")
 public class StudentController {
 
-    private final StudentDB studentDB = new StudentDB(new Student[]{
+    private final StudentService service;
+
+    public StudentController(StudentService service) {
+        this.service = service;
+    }
+
+ /*   private final StudentDB studentDB = new StudentDB(new Student[]{
             new Student(21, 1, "Tizian", true),
             new Student(20, 2, "Ronja", true),
-            new Student(20, 3, "Nico", true)});
-
-    private final StudentService studentService = new StudentService();
+            new Student(20, 3, "Nico", true)});*/
 
     @GetMapping
     public List<Student> getStudent() {
-        return studentService.getStudents();
+        return service.getStudents();
     }
 
     @GetMapping(path = "{id}")
     public Student getStudentById(@PathVariable int id) {
-        return studentService.getStudentById(id);
+        return service.getStudentById(id);
     }
 
-    @PostMapping()
+    @PutMapping()
     public Student addStudent(@RequestBody Student student) {
-        return studentService.addStudent(student);
+        return service.addStudent(student);
     }
 }
