@@ -20,7 +20,7 @@ public class StudentService implements IStudentService {
                 return student;
             }
         }
-        return null;
+        throw new IllegalArgumentException("ID " + id + " is not set to an Student");
     }
 
     @Override
