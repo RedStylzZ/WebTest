@@ -11,7 +11,7 @@ class StudentServiceTest {
     void getStudentById() {
         StudentService studentService = mock(StudentService.class);
 
-        when(studentService.getStudentById(24)).thenReturn(new Student(24, "Tizian", 21));
+//        when(studentService.getStudentById(24)).thenReturn(new Student(24, "Tizian", 21));
 
         assertNotNull(studentService.getStudentById(24));
         verify(studentService).getStudentById(24);

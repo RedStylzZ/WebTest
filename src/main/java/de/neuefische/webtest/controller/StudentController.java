@@ -2,6 +2,7 @@ package de.neuefische.webtest.controller;
 
 import de.neuefische.webtest.model.Student;
 import de.neuefische.webtest.model.StudentService;
+import de.neuefische.webtest.model.WebClientService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
